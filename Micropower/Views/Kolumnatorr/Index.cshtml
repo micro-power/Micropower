@@ -1,0 +1,56 @@
+﻿
+@{
+
+    Layout = null;
+}
+@model Micropower.Models.SetKolumnatorrModel
+
+
+<!DOCTYPE html>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryui")
+@Scripts.Render("~/bundles/jqdatetimepicker")
+@Styles.Render("~/Content/jqdatetimepicker")
+@Styles.Render("~/Content/css")
+
+<html >
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kolumnator</title>
+    <style>
+        body {
+            background-color: #F1F1F1;
+        }
+    </style>
+</head>
+<body style="padding:0px;">
+    
+    <div class="text-center">
+        <h4>Wybierz datę i godzinę startu.</h4>
+        @using (Html.BeginForm("SetStart", "Kolumnatorr", FormMethod.Post))
+            {
+            <div>@Html.TextBoxFor(model => model.DateTimeStart, new { @id = "datetimepicker", @style = "height:15vh; width:40vw; font-size: 3vh" })</div>
+            <button class="btn btn-success" style="height:60px; width:250px; font-size: 14px" type="submit">START</button>
+        }
+    </div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+    var todaysdate = new Date();
+    $(document).ready(function () {
+        $.datetimepicker.setLocale('pl');
+        $('#datetimepicker').datetimepicker({
+
+            format: 'd.m.Y H:i',
+            inline: true,
+            minDate: todaysdate.getDate().toString(),
+            startDate: todaysdate.getDate().toString(),
+            startTime: todaysdate.getTime().toString(),
+            value: todaysdate.getDate().toString(),
+            step: 10
+        });
+    });
+</script>
+
