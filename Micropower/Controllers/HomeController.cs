@@ -1,4 +1,5 @@
-﻿using Micropower.Models;
+﻿using Micropower.Interfaces;
+using Micropower.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

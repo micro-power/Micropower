@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Micropower.Controllers
 {
-    public class KolumnatorrController : Controller
+    public class KolumnatorOnlineController : Controller
     {
         public ActionResult Index()
         {
@@ -15,7 +15,7 @@ namespace Micropower.Controllers
         }
 
         [HttpPost]
-        public ActionResult SetStart(SetKolumnatorrModel model)
+        public ActionResult SetStart(SetKolumnatorModel model)
         {
             return View("Index", model);
         }

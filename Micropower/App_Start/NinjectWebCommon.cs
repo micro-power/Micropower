@@ -14,6 +14,8 @@ namespace Micropower.App_Start
     using System.Web.Mvc;
     using Micropower.Models;
     using Ninject.Web.WebApi;
+    using Ninject.Web.Common.WebHost;
+    using Micropower.Interfaces;
 
     public static class NinjectWebCommon 
     {

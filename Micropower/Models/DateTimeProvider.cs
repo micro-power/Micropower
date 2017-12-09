@@ -1,12 +1,8 @@
-﻿using System;
+﻿using Micropower.Interfaces;
+using System;
 
 namespace Micropower.Models
 {
-    public interface IDateTimeProvider
-    {
-        DateTime GetDateTime();
-    }
-
     public class DateTimeProvider : IDateTimeProvider
     {
         public DateTime GetDateTime()

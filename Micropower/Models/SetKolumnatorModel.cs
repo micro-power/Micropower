@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Micropower.Models
 {
-    public class SetKolumnatorrModel
+    public class SetKolumnatorModel
     {
         public string DateTimeStart { get; set; }
 
