@@ -1,11 +1,14 @@
-﻿using System;
+﻿using Micropower.Interfaces;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace Micropower.Models.Entities
 {
-    public class Column
+    public class Column :IBson
     {
         public enum State
         {
@@ -18,6 +21,8 @@ namespace Micropower.Models.Entities
             GettingLastFraction,
             PompingWastes
         }
+        [BsonId]
+        public ObjectId Id { get; set; }
         public string Temperature1 { get; set; }
         public string Temperature2 { get; set; }
         public string Temperature3 { get; set; }

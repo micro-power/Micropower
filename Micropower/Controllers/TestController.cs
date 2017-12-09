@@ -1,5 +1,6 @@
 ﻿using Micropower.Interfaces;
 using Micropower.Models;
+using Micropower.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,16 +13,18 @@ namespace Micropower.Controllers
     public class TestController : ApiController
     {
         private IDateTimeProvider time;
+        private IRepository<Column> repository;
 
         public TestController(IDateTimeProvider dateTimeProvider)
         {
             time = dateTimeProvider;
+            repository = new Repository<Column>("Kolumnator");
         }
 
         // GET: api/Test
-        public IEnumerable<string> Get()
+        public IEnumerable<Column> Get()
         {
-            return new string[] { "value1", "value2" };
+            return repository.List();
         }
 
         // GET: api/Test/5
