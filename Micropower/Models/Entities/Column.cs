@@ -21,24 +21,14 @@ namespace Micropower.Models.Entities
             GettingLastFraction,
             PompingWastes
         }
+
         [BsonId]
         public ObjectId Id { get; set; }
-        public string Temperature1 { get; set; }
-        public string Temperature2 { get; set; }
-        public string Temperature3 { get; set; }
-        public string Temperature4 { get; set; }
-        public bool OverflowSensor1 { get; set; }
-        public bool OverflowSensor2 { get; set; }
-        public bool Heating1 { get; set; }
-        public bool Heating2 { get; set; }
-        public bool Heating3 { get; set; }
-        public bool Heating4 { get; set; }
-        public State ColumnState { get; set; }
-        public SetColumnParams ColumnWorkingParams { get; set; }
-        public string TemperatureAlarm1 { get; set; }
-        public string TemperatureAlarm2 { get; set; }
-        public string TemperatureAlarm3 { get; set; }
-        public string TemperatureAlarm4 { get; set; }
-        public bool CheckOverflowSensors { get; set; }
+
+        public ColumnState ColumnCurrentState { get; set; }
+
+        public ColumnParamsSet ColumnWorkingParams { get; set; }
+
+        public ColumnAlarmSet ColumnAlarms { get; set; }
     }
 }

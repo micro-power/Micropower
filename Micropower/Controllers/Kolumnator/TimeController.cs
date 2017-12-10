@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Micropower.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,31 +8,33 @@ using System.Web.Http;
 
 namespace Micropower.Controllers
 {
-    public class KolumnatorController : ApiController
+    public class TimeController : ApiController
     {
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        // GET: api/Time
+        public string Get()
         {
-            return new string[] { "value1", "value2" };
+            DateTimeProvider timeprovider = new DateTimeProvider();
+
+            return "$time^"+timeprovider.GetDateTime().ToLongTimeString()+"#";
         }
 
-        // GET api/<controller>/5
+        // GET: api/Time/5
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<controller>
+        // POST: api/Time
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/<controller>/5
+        // PUT: api/Time/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/<controller>/5
+        // DELETE: api/Time/5
         public void Delete(int id)
         {
         }
