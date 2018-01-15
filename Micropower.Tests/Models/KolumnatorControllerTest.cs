@@ -24,7 +24,7 @@ namespace Micropower.Tests.Models
         public void Get_RequestData_GetObject(string param)
         {
             // Arrange
-            var controller = new ColumnController();
+            var controller = new KolumnatorController();
             controller.Request = new HttpRequestMessage();
             controller.Configuration = new HttpConfiguration();
             Object response;

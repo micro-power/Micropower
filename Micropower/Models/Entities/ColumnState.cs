@@ -4,12 +4,12 @@ namespace Micropower.Models.Entities
 {
     public class ColumnState
     {
-        public double Temperature1 { get; set; }
-        public double Temperature2 { get; set; }
-        public double Temperature3 { get; set; }
-        public double Temperature4 { get; set; }
-        public bool OverflowSensor1 { get; set; }
-        public bool OverflowSensor2 { get; set; }
-        public State ColumnStep { get; set; }
+        public Temperature Temperature1 { get; set; } = new Temperature();
+        public Temperature Temperature2 { get; set; } = new Temperature();
+        public Temperature Temperature3 { get; set; } = new Temperature();
+        public Temperature Temperature4 { get; set; } = new Temperature();
+        public bool OverflowSensor1 { get; set; } = false;
+        public bool OverflowSensor2 { get; set; } = false;
+        public State ColumnStep { get; set; } = State.Waiting;
     }
 }

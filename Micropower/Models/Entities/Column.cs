@@ -25,10 +25,10 @@ namespace Micropower.Models.Entities
         [BsonId]
         public ObjectId Id { get; set; }
 
-        public ColumnState ColumnCurrentState { get; set; }
+        public ColumnState ColumnCurrentState { get; set; } = new ColumnState();
 
-        public ColumnParamsSet ColumnWorkingParams { get; set; }
+        public ColumnParamsSet ColumnWorkingParams { get; set; } = new ColumnParamsSet();
 
-        public ColumnAlarmSet ColumnAlarms { get; set; }
+        public ColumnAlarmSet ColumnAlarms { get; set; } = new ColumnAlarmSet();
     }
 }

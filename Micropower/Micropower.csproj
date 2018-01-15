@@ -181,7 +181,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\Kolumnator\KolumnatorController.cs" />
+    <Compile Include="Controllers\KolumnatorController.cs" />
     <Compile Include="Controllers\KolumnatorOnlineController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
@@ -192,11 +192,13 @@
     <Compile Include="Models\DateTimeProvider.cs" />
     <Compile Include="Interfaces\IBson.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Models\DTO\ColumnBindingModel.cs" />
     <Compile Include="Models\Entities\Column.cs" />
     <Compile Include="Models\Entities\ColumnAlarmSet.cs" />
     <Compile Include="Models\Entities\ColumnState.cs" />
     <Compile Include="Models\Entities\ColumnParamsSet.cs" />
     <Compile Include="Interfaces\ITimeProvider.cs" />
+    <Compile Include="Models\Entities\Temperature.cs" />
     <Compile Include="Models\NinjectTest.cs" />
     <Compile Include="Models\Repository.cs" />
     <Compile Include="Models\SetKolumnatorModel.cs" />
